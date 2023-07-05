@@ -90,7 +90,7 @@ class ProjectManagerPage(tk.Frame):
             self.component_order.remove(selected_item)
             del self.components[selected_item]
 
-    def on_treeview_click(self):
-        selected_item = self.component_tree.focus()
+    def on_treeview_click(self, event):
+        selected_item = self.component_tree.focus()  # get selected item
         if selected_item:
             self.id_var.set(selected_item)
